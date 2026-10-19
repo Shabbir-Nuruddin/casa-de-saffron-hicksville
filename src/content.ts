@@ -1,0 +1,112 @@
+import "@fontsource/playfair-display/700.css";
+import type { Site } from "./lib";
+
+const e = (s: string) => ({ en: s, hi: s });
+
+export const SITE: Site = {
+  name: "Casa De Saffron",
+  sub: e("Halal Asian-Latin-Indian fusion · Hicksville, NY"),
+  banner: e("Dinner from 4 PM, closed Tuesday · 200 N Broadway, Hicksville"),
+  phone: "15165487180",
+  phoneDisplay: "+1 (516) 548-7180",
+  lat: 40.7732917,
+  lon: -73.5283372,
+  hours: [[16, 22], [16, 22], [0, 0], [16.5, 22], [16, 22], [16, 22], [16, 22]],
+  theme: {
+    dark: true,
+    bg: "#0b0d1a",
+    bg2: "#121528",
+    panel: "#171a30",
+    ink: "#f4f2fa",
+    ink2: "#bdb8d2",
+    ink3: "#837e9c",
+    line: "#252945",
+    accent: "#f4a52a",
+    onAccent: "#1a0f00",
+    display: "Playfair Display",
+    weight: 700,
+    upper: false,
+  },
+  scene: "celebration",
+  align: "left",
+  hero: {
+    title: [e("Halal fusion,"), e("made for nights out.")],
+    proof: e("4.7 on Google from 2,366 reviews. Halal Indian, Asian and Latin fusion with a DJ, curtained booths and a banquet space at Broadway Commons, Hicksville."),
+    fallback: "/img/p1.jpg",
+    slides: ["/img/p1.jpg", "/img/p5.jpg", "/img/p3.jpg"],
+  },
+  marquee: ["Lamb Biryani", "Chicken Lollipops", "Butter Chicken", "Malai Chicken", "Lobster Fried Rice", "Spicy Eggplant", "Chai Martini", "Lychee Mojito"],
+  dishes: {
+    title: e("What people order again"),
+    body: e("Real Google reviews, word for word."),
+    layout: "list",
+    items: [
+      { name: e("Lamb Biryani"), quote: "Lamb Biryani was amazing along with the other dishes we ordered." },
+      { name: e("Malai Chicken"), quote: "The Lychee Martini was amazing. My favorite was the Malai Chicken.", img: "/img/p9.jpg" },
+      { name: e("Butter Chicken"), quote: "we especially loved the butter chicken, lollipop chicken, fingerling potatoes, and crepe brûlée.", img: "/img/p3.jpg" },
+      { name: e("Chicken Lollipops"), quote: "Appreciated all his recommendations and the food, especially the octopus and chicken lollipops were amazing." },
+      { name: e("Spicy Eggplant"), quote: "The spicy eggplant dish was outstanding!" },
+      { name: e("Fried Calamari"), quote: "Fried Calamari was to die for and we both thought it was the best we've ever had.", img: "/img/p10.jpg" },
+    ],
+  },
+  gallery: {
+    title: e("From the kitchen and the bar"),
+    layout: "strip",
+    photos: [
+      { src: "/img/p4.jpg", alt: "Chef's special" },
+      { src: "/img/p6.jpg", alt: "Mocktail" },
+      { src: "/img/p8.jpg", alt: "Dining room", wide: true },
+      { src: "/img/p7.jpg", alt: "Dessert" },
+      { src: "/img/p2.jpg", alt: "Small plates" },
+      { src: "/img/p14.jpg", alt: "Main course" },
+      { src: "/img/p11.jpg", alt: "Plated dessert" },
+    ],
+  },
+  feature: {
+    kind: "occasions",
+    title: e("Birthdays, weddings and Friday nights"),
+    body: e("Curtained booths for groups, a banquet space, a stage and a DJ."),
+    img: "/img/p8.jpg",
+    items: [
+      { label: e("Weddings"), quote: "My husband and I had our wedding dinner here and everything was exceptional." },
+      { label: e("Birthdays"), quote: "And for making sure my birthday was beautiful, memorable and successful !!!" },
+      { label: e("Curtained booths"), quote: "If you have a large enough party, you get a semi private dining experience which is really nice!" },
+      { label: e("DJ nights"), quote: "They have a banquet space, a stage, a DJ, and a Dance floor." },
+      { label: e("Sophia"), quote: "Sophia was super friendly, fun, professional, and knowledgeable." },
+    ],
+  },
+  reviews: {
+    title: e("2,202 of 2,366 reviews are four or five stars"),
+    rating: 4.7,
+    dist: [2021, 181, 47, 31, 86],
+    quotes: [
+      { quote: "The food was simply amazing, and the service was equally impressive. The ambiance was elegant and sophisticated, making it an ideal choice for a romantic date or any special occasion.", stars: 5 },
+      { quote: "Finally something that's real fine dining with all the flavor and fusion needed to satisfy our south Asian tastebuds.", stars: 5 },
+    ],
+  },
+  visit: {
+    title: e("Broadway Commons, Hicksville"),
+    img: "/img/p5.jpg",
+    alt: "Casa De Saffron dining room",
+    address: e("200 N Broadway, Hicksville, NY 11801 (Broadway Commons)"),
+    note: e("4 PM to 10 PM (from 4:30 on Wednesday). Closed Tuesday."),
+  },
+  build: {
+    title: e("Book a table or a party"),
+    body: e("Pick the occasion, how many of you and when. It goes to WhatsApp exactly as you see it."),
+    pick: {
+      label: e("Occasion"),
+      options: [
+        { name: e("Date night") },
+        { name: e("Birthday") },
+        { name: e("Family dinner") },
+        { name: e("Party or banquet") },
+      ],
+    },
+    people: true,
+    when: true,
+    hello: e("Hi Casa De Saffron, I'd like to book:"),
+  },
+  waHello: e("Hi Casa De Saffron, I'd like to book a table. People: , day: , time: "),
+  order: ["dishes", "feature", "build", "gallery", "reviews", "visit"],
+};
